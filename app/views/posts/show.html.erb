@@ -37,15 +37,11 @@
   <!-- Display comments counter -->
     <h2 class="subtitle is-5"><strong><%= @post.comments.count %></strong> Comments</h2>
     <% render @post.comments %>
-
     <div class="comment-form">
       <hr />
       <h3 class="subtitle is-3">Reply to this post</h3>
       <%= render 'comments/form' %>
     </div>
-
-
-
   </div>
 
 </section>

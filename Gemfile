@@ -59,6 +59,7 @@ group :development do
   gem 'guard-livereload', '~> 2.5', '>= 2.5.2', require: false
   # Make errors readable need to be in development.
   gem 'better_errors', '~> 2.5'
+  gem 'solargraph'
 end
 
 group :test do
