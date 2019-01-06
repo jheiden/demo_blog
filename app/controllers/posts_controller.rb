@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
   def index
-
+    @posts = Post.all.order("created_at DESC")
   end
 
   def new
@@ -17,8 +17,15 @@ class PostsController < ApplicationController
     else
       render 'new' # render the <new> template
     end
-    
   end
+    
+  def show
+    # search for post by :id
+    @post = Post.find(params[:id])
+ 
+  end
+
+
 
   private
 
