@@ -17,8 +17,10 @@
       <%= link_to "Edit", edit_post_path(@post), class: "button" %>
     </p>
     <p class="level-item">
-      <!-- TODO : Add delete method -->
-      <a class="button is-danger">Delete</a>
+      <!-- There is no "delete route" so we pass => post_path together with the [:id] in @post to <method:> <:delete> -->
+      <!-- Using a browser functionality to ask for confirmation through <data> prior to deleting. -->
+      <%= link_to "Delete", post_path(@post), method: :delete, data: {confirm: "Are you sure?"}, 
+      class: "button is-danger" %> 
     </p>
   </div>
   </nav>
