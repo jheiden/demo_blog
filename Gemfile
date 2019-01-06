@@ -36,15 +36,10 @@ gem 'jbuilder', '~> 2.5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
-# Make errors readable
-
-gem 'better_errors', '~> 2.5'
-
 # Bulma css
 gem 'bulma-rails', '~> 0.6.1'
 
 # Simple form
-
 gem 'simple_form', '~> 4.1'
 
 group :development, :test do
@@ -62,6 +57,8 @@ group :development do
   # guard live reload extension (primary need)
   gem 'guard', '~> 2.14', '>= 2.14.1'
   gem 'guard-livereload', '~> 2.5', '>= 2.5.2', require: false
+  # Make errors readable need to be in development.
+  gem 'better_errors', '~> 2.5'
 end
 
 group :test do
