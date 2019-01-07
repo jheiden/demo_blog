@@ -5,7 +5,7 @@ class CommentsController < ApplicationController
     # post_id was created through running rails g migration AddPostIdToComments
     # and then editing code in migration file. <:post_id> and <comments> is linked to arguments in migration file
 
-    @post = Post.find(params[:post_id)
+    @post = Post.find(params[:post_id])
     @comment = @post.comments.create(params[:comment].permit(:name, :comment))
     redirect_to post_path(@post)
 
